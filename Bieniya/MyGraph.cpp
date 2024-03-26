@@ -71,7 +71,7 @@ void MyGraph::DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct)
 		double Yscale = rect_graph.Height / (maxY - minY);
 		draw_in_buffer.ScaleTransform(Xscale, -Yscale);
 
-		Pen pen_ortho(Color(255, 0, 0, 0), 0.01);
+		Pen pen_ortho(Color(255, 0, 0, 0), 0.001);
 
 		draw_in_buffer.DrawLine(&pen_ortho, PointF(minX, minY), PointF(minX, maxY));
 		draw_in_buffer.DrawLine(&pen_ortho, PointF(minX, minY), PointF(maxX, minY));
